@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{ game.name }}</title>
+
+  <link href="/static/css/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="/static/favicon.ico">
+  <link rel="apple-touch-icon" href="/static/meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  <style>
+  .tile-inner {
+    background-size: 107px 107px!important;
+  }
+  .tile.tile-2 .tile-inner {
+    background: #fff url('/static/media/{{ game.tile2.url }}');
+  }
+  .tile.tile-4 .tile-inner {
+    background: #fff url('/static/media/{{ game.tile4.url }}');
+  }
+    .tile.tile-8 .tile-inner {
+    background: #fff url('/static/media/{{ game.tile8.url }}');
+  }
+    .tile.tile-16 .tile-inner {
+    background: #fff url('/static/media/{{ game.tile16.url }}');
+  }
+    .tile.tile-32 .tile-inner {
+    background: #fff url('/static/media/{{ game.tile32.url }}');
+  }
+    .tile.tile-64 .tile-inner {
+    background: #fff url('/static/media/{{ game.tile64.url }}');
+  }
+    .tile.tile-128 .tile-inner {
+    background: #fff url('/static/media/{{ game.tile128.url }}');
+  }
+    .tile.tile-256 .tile-inner {
+    background: #fff url('/static/media/{{ game.tile256.url }}');
+  }
+    .tile.tile-512 .tile-inner {
+    background: #fff url('/static/media/{{ game.tile512.url }}');
+  }
+    .tile.tile-1024 .tile-inner {
+    background: #fff url('/static/media/{{ game.tile1024.url }}');
+  }
+    .tile.tile-2048 .tile-inner {
+    background: #fff url('/static/media/{{ game.tile2048.url }}');
+  }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">{{ game.name }}</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+    <p class="game-intro">{{ game.desc }}</p>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">Keep going</a>
+          <a class="retry-button">Try again</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+    <p class="game-explanation">
+      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+    </p>
+    <hr>
+  </div>
+
+  <script src="/static/js/animframe_polyfill.js"></script>
+  <script src="/static/js/keyboard_input_manager.js"></script>
+  <script src="/static/js/html_actuator.js"></script>
+  <script src="/static/js/grid.js"></script>
+  <script src="/static/js/tile.js"></script>
+  <script src="/static/js/local_score_manager.js"></script>
+  <script src="/static/js/game_manager.js"></script>
+  <script src="/static/js/application.js"></script>
+</body>
+</html>
